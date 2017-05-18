@@ -208,15 +208,15 @@
 		    cursor: pointer;
         }
 
-	#section0,
-	#section1,
-	#section2,
-	#section3{
+	.section{
 	    background-size: cover;
 	}        
     #section0{
-	    background-image: url(img/colgkid.jpg);
+	    background-image: url(colgkid.jpg) !important;
 	    /*padding: 30% 0 0 0;*/
+	}
+	.contents{
+		background-image: url(colgkid-frost.jpg) !important;
 	}
 	@media only screen and (max-device-width: 600px) { 
 		.icons{
@@ -284,6 +284,7 @@
 <div id="fullpage">
 
 	<div class="section " id="section0">
+	<div class="contents">
 		<div class="intro brand">
 			<h1 class="wow pulse" data-wow-duration="1s" ><font color="white">ReLearn</font> Pro</h1>
 			<!-- <img src="img/logo.min.light.png"> -->
@@ -305,9 +306,10 @@
         </div>
                 <a href="#secondPage"><input type="button" class="know wow rubberBand" data-wow-duration="1s" value="Know More!"></a>
 		</div>
-		<div class="brand-img" >
+		</div>
+		<!-- <div class="brand-img" >
 			<img class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1s" src="img/classroom.jpg">
-		</div>			
+		</div> -->			
 	</div>
 	<div class="section" id="section1">
 	    <div class="slide" id="slide1">
