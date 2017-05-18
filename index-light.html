@@ -14,10 +14,6 @@
 	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="examples.css" />
 	<style>
-
-	/* Style for our header texts
-	* --------------------------------------- */
-	/*body{font-family: 'Old Standard TT';}*/
 	h1{
 		font-size: 5em;
 		font-family: arial,helvetica;
@@ -28,14 +24,12 @@
 		color: #383a3d;
 	}
 
-	/* Centered texts in each section
-	* --------------------------------------- */
+	
 	.section{
 		text-align:center;
 	}
 
-	/* Overwriting styles for control arrows for slides
-	* --------------------------------------- */
+
 	.controlArrow.prev {
 		left: 50px;
 	}
@@ -44,8 +38,7 @@
 	}
 	
 
-	/* Bottom menu
-	* --------------------------------------- */
+	
 	#infoMenu li a {
 		color: #fff;
 	}
@@ -55,7 +48,7 @@
 	    background: grey;
 	    width: 8px;
 	    height: 8px;
-	    /*border: 1px solid white;*/
+	    
 	    margin: -4px 0 0 -4px;
 	}
 	      
@@ -81,7 +74,7 @@
 	}
 	
 	.logo-brand{
-		/*margin-left: 70%;*/
+		
 		margin-top: 1vh;
 		position: absolute;
 		z-index: 1000;
@@ -107,16 +100,16 @@
 	text-decoration: none;
 	padding: .2em 1em;
 	color: #383a3d;
-	/*background-color: #036;*/
+	
 	}
 
 	#navcontainer ul li a:hover
 	{
 	color: #F15234;
-	/*background-color: #369;*/
+	
 	}
 	li{
-		/*color: #383a3d;*/
+		
 		color: #F15234;
 
 	}
@@ -127,7 +120,7 @@
 		margin-left: 47%;
 	}
 	.scroll>a>img{
-		/*width: 50px;*/
+		
 		height: 7vh;
 		max-width: 100%;
 
@@ -138,15 +131,18 @@
 		width: 100%;
 		height: 15vh;
 		position: absolute;
-		 /*background-image: linear-gradient(#000000, grey 6%, silver);*/
-/*		background: rgba(255,255,255,1);
-background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
-background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
-background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
-background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
-background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );*/
+
+	}
+
+	@media only screen and (max-device-width: 600px) { 
+		.icons{
+			display: none;
+		}
+		.logo-brand>img{
+			width: 16vw;
+			height: 10vh;
+			margin-left: 1vw;
+		}
 	}
 	</style>
 
