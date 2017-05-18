@@ -17,7 +17,7 @@
 
 	/* Style for our header texts
 	* --------------------------------------- */
-	body{font-family: 'Old Standard TT';}
+	/*body{font-family: 'Old Standard TT';}*/
 	h1{
 		font-size: 5em;
 		font-family: arial,helvetica;
@@ -25,7 +25,7 @@
 		margin:0;
 	}
 	.intro p{
-		color: #fff;
+		color: #383a3d;
 	}
 
 	/* Centered texts in each section
@@ -67,15 +67,13 @@
 	    height: 8px;
 	    margin: -4px 0 0 -4px;
 
-	    /*margin: -8px 0 0 -8px;*/
 	    background: #F15234;
-	    /*box-sizing: border-box;*/
-	    /*border: 1px solid #24221F;*/
+	 
 	}
 	.icons{
 
 		margin-left: 68%;
-		margin-top: 9vh;
+		margin-top: 7vh;
 		position: absolute;
 		z-index: 1000;
 		color:white;
@@ -84,10 +82,10 @@
 	
 	.logo-brand{
 		/*margin-left: 70%;*/
-		margin-top: 4vh;
+		margin-top: 1vh;
 		position: absolute;
 		z-index: 1000;
-		color:white;
+		
 	}
 	.logo-brand>img{
 		width: 16vw;
@@ -108,7 +106,7 @@
 	{
 	text-decoration: none;
 	padding: .2em 1em;
-	color: #fff;
+	color: #f2f2f2;
 	/*background-color: #036;*/
 	}
 
@@ -116,6 +114,39 @@
 	{
 	color: #F15234;
 	/*background-color: #369;*/
+	}
+	li{
+		/*color: #383a3d;*/
+		color: #F15234;
+
+	}
+	.scroll{
+		position: absolute;
+		z-index: 1000;
+		bottom: 0;
+		margin-left: 47%;
+	}
+	.scroll>a>img{
+		/*width: 50px;*/
+		height: 9vh;
+		max-width: 100%;
+
+	}
+	.nav{
+		/*background-color: white;*/
+		z-index: 1000;
+		width: 100%;
+		height: 15vh;
+		position: absolute;
+		 /*background-image: linear-gradient(#000000, grey 6%, silver);*/
+/*		background: rgba(255,255,255,1);
+background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );*/
 	}
 	</style>
 
@@ -136,8 +167,9 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				anchors: ['firstPage', 'secondPage', '3rdPage','Contact'],
+				anchors: ['About', 'second', 'third','Contact'],
 				sectionsColor: ['#1b1f26', '#1b1f26', '#1b1f26', '#1b1f26'],
+				// sectionsColor: ['white', 'white', 'white', 'white'],
 				navigation: true,
 				navigationPosition: 'left',
 				navigationTooltips: ['About', '2', '3','Contact']
@@ -147,26 +179,27 @@
 
 </head>
 <body>
-
+<div class="scroll"><a><img src="scrolling-icon.gif"></a></div>
 <!--  -->
+<div class="nav">
+	<div class="logo-brand">
+		<img src="logo.min.light.png" >
+	</div>
+	
+	<div class="icons">
+		<div id="navcontainer">
+			<ul>
+			<li><a href="#About">About </a>|</li>
+			<li><a href="#second">Second</a>|</li>
+			<li><a href="#third">Third</a>|</li>
+			<!-- <li><a href="#">Vegetables</a></li> -->
+			<li><a href="#Contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</div>	
+	
 
-<div class="logo-brand">
-<img src="logo.min.png" >
-</div>
-<div class="icons">
-
-<div id="navcontainer">
-	<ul>
-	<li><a href="#">About </a>|</li>
-	<li><a href="#">Second</a>|</li>
-	<li><a href="#">Third</a>|</li>
-	<!-- <li><a href="#">Vegetables</a></li> -->
-	<li><a href="#">Contact</a></li>
-	</ul>
-</div>
-		<!-- <a href="https://mail.google.com/mail/?view=cm&fs=1&to=praveenmxy@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a> -->
-
-		</div>	
 <div id="fullpage">
 
 	<div class="section " id="section0">
