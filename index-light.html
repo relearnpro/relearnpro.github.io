@@ -9,10 +9,11 @@
 	<meta name="author" content="Topfreshers" />
 	
 	<link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/animate.css">
 
-
-	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link href="css/styles.css" rel="stylesheet" />              
 	<style>
 	h1{
 		font-size: 5em;
@@ -22,6 +23,7 @@
 	}
 	.intro p{
 		color: #383a3d;
+		font-size: 1em;
 	}
 
 	
@@ -134,6 +136,74 @@
 
 	}
 	
+	.brand{
+		margin-top: 6vh;
+		float: left !important;
+		margin-left: 12vw;
+	}
+	.brand-img{
+		float: right !important;
+		margin-right: 7vw;
+	}
+
+	/*typed*/
+	 .typed-cursor{
+            opacity: 1;
+            font-weight: 100;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            -ms-animation: blink 0.7s infinite;
+            -o-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        @-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-ms-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-o-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+
+        .typed-fade-out{
+            opacity: 0;
+            animation: 0;
+            transition: opacity .25s;
+        }
+
+        .know{
+        	margin-top: 5px;
+        	 background-color: #F15234;
+		    border :0;
+		    border-radius: 20px;
+
+		    color: white;
+		    padding: 15px 32px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		    /*margin: 4px 2px;*/
+		    cursor: pointer;
+        }
+
 	@media only screen and (max-device-width: 600px) { 
 		.icons{
 			display: none;
@@ -157,8 +227,8 @@
 
 	<script type="text/javascript" src="vendors/scrolloverflow.js"></script>
 
-	<script type="text/javascript" src="jquery.fullPage.js"></script>
-	<script type="text/javascript" src="examples.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/examples.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -175,11 +245,11 @@
 
 </head>
 <body>
-<div class="scroll"><a><img src="scrolling-icon-light.gif"></a></div>
+<div class="scroll"><a><img src="img/scrolling-icon-light.gif"></a></div>
 <!--  -->
 <div class="nav">
 	<div class="logo-brand">
-		<img src="logo.min.png" >
+		<img src="img/logo.min.png" >
 	</div>
 	
 	<div class="icons">
@@ -199,10 +269,29 @@
 <div id="fullpage">
 
 	<div class="section " id="section0">
-		<div class="intro">
-			<h1>Relearn Pro</h1>
-			<p>An Initiative by Topfreshers</p>
+		<div class="intro brand">
+			<h1 class="wow pulse" data-wow-duration="1s" ><font color="#383a3d">ReLearn</font> Pro</h1>
+			<!-- <p >An Initiative by Topfreshers</p> -->
+			<font>CAT | GMAT | GRE | TOEFL | IELTS</font>
+			<div class="type-wrap">
+			<span>Are you</span>
+            <div id="typed-strings">
+                <span>ready to break the<strong> GRE Code</strong> ?</span>
+                <span>ready to Ace<strong> GMAT</strong> ?</span>
+                <span>ready to Bell the<strong> CAT</strong> ?</span>
+                <span>an <strong>MBA</strong> Aspirant ?</span>
+                <span>a <strong> Working Professional</strong> ?</span>
+                <!-- <p>It <em>types</em> out sentences.</p> -->
+                <!-- <p>And then deletes them.</p> -->
+                <!-- <p>Try it out!</p> -->
+            </div>
+            <span id="typed" style="white-space:pre;"></span>
+        </div>
+                <a href="#secondPage"><input type="button" class="know" value="Know More!"></a>
 		</div>
+		<div class="brand-img" >
+			<img class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s" src="img/classroom.jpg">
+		</div>			
 	</div>
 	<div class="section" id="section1">
 	    <div class="slide" id="slide1">
@@ -226,6 +315,50 @@
 	</div>
 </div>
 
+	<script src="js/wow.js"></script>
+	<script src="js/typed.js" type="text/javascript"></script>
 
+	<script>
+    document.addEventListener('DOMContentLoaded', function(){
+
+        Typed.new("#typed", {
+            stringsElement: document.getElementById('typed-strings'),
+            typeSpeed: 40,
+            backDelay: 500,
+            loop: true,
+            contentType: 'html', // or text
+            // defaults to null for infinite loop
+            loopCount: null,
+            callback: function(){ foo(); },
+            resetCallback: function() { newTyped(); }
+        });
+
+        var resetElement = document.querySelector('.reset');
+        if(resetElement) {
+            resetElement.addEventListener('click', function() {
+                document.getElementById('typed')._typed.reset();
+            });
+        }
+
+    });
+
+    function newTyped(){ /* A new typed object */ }
+
+    function foo(){ console.log("Callback"); }
+
+    </script>
+	<script>
+               wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+
+    </script>
 </body>
 </html>
