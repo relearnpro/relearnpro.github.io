@@ -265,6 +265,60 @@
 			/*display: none !important;*/
 		}
 	}
+
+	.sidenav , .bars{
+		display: none;
+	}
+	
+
+	@media screen and (max-device-width: 780px) {
+	  .sidenav {padding-top: 20px;}
+	  .sidenav a {font-size: 18px;}
+	  .bars,.sidenav{
+	  	margin-left: 90%; 
+	  	display: block;
+	  }
+	  .bars{
+	  	margin-top: 2vh;
+	  	z-index: 100;
+	  }
+	  .sidenav {
+	    height: 100%;
+	    width: 0;
+	    position: fixed;
+	    z-index: 10000;
+	    top: 0;
+	    right: 0;
+	    background-color: #111;
+	    overflow-x: hidden;
+	    transition: 0.5s;
+	    padding-top: 60px;
+
+	}
+
+
+	.sidenav a {
+	    padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 25px;
+	    /*color: #818181;*/
+	    color: #F15234;
+	    display: block;
+	    transition: 0.3s;
+	}
+
+	.sidenav a:hover, .offcanvas a:focus{
+	    color: #f1f1f1;
+	}
+
+	.sidenav .closebtn {
+	    position: absolute;
+	    top: 0;
+	    right: 25px;
+	    font-size: 36px;
+	    margin-left: 50px;
+	}
+	}
 	</style>
 
 	<!--[if IE]>
@@ -294,15 +348,31 @@
 			});
 		});
 	</script>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
 
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 </head>
 <body>
 <div class="scroll"><a><img src="img/scrolling-icon.gif"></a></div>
 <!--  -->
+<div id="mySidenav" class="sidenav">
+  <a  class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
 <div class="nav">
 	<div class="logo-brand">
 		<img src="img/logo.min.light.png" >
 	</div>
+<span style="font-size:40px;cursor:pointer;color: white" class="bars" onclick="openNav()">&#9776;</span>
 	
 	<div class="icons">
 		<div id="navcontainer">
@@ -330,11 +400,11 @@
 			<div class="type-wrap">
 			<span>Are you</span>
             <div id="typed-strings">
-                <span class="span_color">ready to break the<strong class = "strong_color"> GRE Code</strong> ?</span>
-                <span class="span_color">ready to Ace<strong class = "strong_color"> GMAT</strong> ?</span>
-                <span class="span_color">ready to Bell the<strong class = "strong_color"> CAT</strong> ?</span>
-                <span class="span_color">an <strong class = "strong_color">MBA</strong> Aspirant ?</span>
-                <span class="span_color">a <strong class = "strong_color"> Working Professional</strong> ?</span>
+                <span class="span_color" style="font-size: 2vw;">ready to break the<strong class = "strong_color"> GRE Code</strong> ?</span>
+                <span class="span_color" style="font-size: 2vw;">ready to Ace<strong class = "strong_color"> GMAT</strong> ?</span>
+                <span class="span_color" style="font-size: 2vw;">ready to Bell the<strong class = "strong_color"> CAT</strong> ?</span>
+                <span class="span_color" style="font-size: 2vw;">an <strong class = "strong_color">MBA</strong> Aspirant ?</span>
+                <span class="span_color" style="font-size: 2vw;">a <strong class = "strong_color"> Working Professional</strong> ?</span>
                 <!-- <p>It <em>types</em> out sentences.</p> -->
                 <!-- <p>And then deletes them.</p> -->
                 <!-- <p>Try it out!</p> -->
