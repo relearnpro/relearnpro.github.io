@@ -233,6 +233,10 @@
 		.icons{
 			display: none;
 		}
+		.know{
+		    font-size: 4vw;
+
+		}
 		#section0{
 	    background-image: url(colgkid.jpg) !important;
 	     background-position: center; 
@@ -279,7 +283,7 @@
 	  	display: block;
 	  }
 	  .bars{
-	  	margin-top: 2vh;
+	  	margin-top: 1vh;
 	  	z-index: 1000;
 	  	color: white !important;
 	  	text-decoration: none;
@@ -291,7 +295,9 @@
 	    z-index: 10000;
 	    top: 0;
 	    right: 0;
-	    background-color: #111;
+	    /*background-color: #111;*/
+	    background-color: white;
+
 	    overflow-x: hidden;
 	    transition: 0.5s;
 	    padding-top: 60px;
@@ -303,8 +309,8 @@
 	    padding: 8px 8px 8px 32px;
 	    text-decoration: none;
 	    font-size: 25px;
-	    /*color: #818181;*/
-	    color: white;
+	    color: #818181;
+	    /*color: white;*/
 	    /*color: #F15234;*/
 	    display: block;
 	    transition: 0.3s;
@@ -312,10 +318,11 @@
 	}
 	.sidenav > .navs{
 		margin-top: 4vh;
-	    background-color: #101;
+	    /*background-color: #101;*/
 	}
 	.sidenav a:hover, .offcanvas a:focus{
-	    color: #f1f1f1;
+	    color: #F15234;
+	    background-color: f2f2f2;
 	}
 
 	.sidenav .closebtn {
@@ -324,6 +331,10 @@
 	    right: 25px;
 	    font-size: 36px;
 	    margin-left: 50px;
+	}
+	.copyright{
+		display: none;
+		margin-top: : 100% !important;
 	}
 	}
 	</style>
@@ -370,10 +381,11 @@ function closeNav() {
 <!--  -->
 <div id="mySidenav" class="sidenav">
   <a  class="closebtn" onclick="closeNav()">&times;</a>
-  <a class="navs" href="#">About</a>
-  <a class="navs" href="#">Services</a>
-  <a class="navs" href="#">Clients</a>
-  <a class="navs" href="#">Contact</a>
+  <a class="navs" href="#About">About</a><hr>
+  <a class="navs" href="#secondPage">Second</a><hr>
+  <a class="navs" href="#third">Third</a><hr>
+  <a class="navs" href="#Contact">Contact</a><hr>
+  <!-- <a class="copyright" href="#">ReLearn Pro 2017</a> -->
 </div>
 <div class="nav">
 	<div class="logo-brand">
