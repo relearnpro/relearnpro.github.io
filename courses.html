@@ -13,622 +13,924 @@
 <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css">
 <link href="css/style.css" rel="stylesheet">
 
-<style type="text/css">
-	.devicon-java-plain{
-		font-size: 9vw;
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function exam() {
+    document.getElementById("it").style.display = "none";
+    document.getElementById("exam").style.display = "inline-block";
+    document.getElementById("exambtn").classList.remove("btn-default");
+    document.getElementById("exambtn").classList.add("btn-success");
+    document.getElementById("itbtn").classList.remove("btn-success");
+    document.getElementById("itbtn").classList.add("btn-default");
+    $('.devicon-android-plain').css("color","darkorange");
+    $('.devicon-redis-plain').css("color","white");
+}
+
+function it() {
+    document.getElementById("exam").style.display = "none";
+    document.getElementById("it").style.display = "inline-block";
+    document.getElementById("itbtn").classList.remove("btn-default");
+    document.getElementById("itbtn").classList.add("btn-success");
+    document.getElementById("exambtn").classList.remove("btn-success");
+    document.getElementById("exambtn").classList.add("btn-default");
+    $('.devicon-redis-plain').css("color","darkorange");
+
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<style>
+#exam{
+	display: none;
+}
+.devicon-android-plain{
+	font-size: 1vw;
+	padding-right: 5px;
+	/*color: black;*/
+}
+.devicon-redis-plain{
+	font-size: 1vw;
+	color: darkorange;
+	padding-right: 5px;
+}
+#img_36{
+	cursor: pointer;
+}
+.box2 {  background-color: #f86924;  }
+
+.box3 {  background-color: #ff9f00;  }
+.box4 { background-color: #12e059	;  }
+.box1{
+	background-color: #35bc7a;
+}
+.bottom_link { position: absolute; bottom: 0; padding-bottom: 8px; text-align: right !important; width: 100%; right: 15px; }
+
+.h2font { clear: both; margin-left: 8px; margin-top: 12px; display: inline-block; text-align: left; color: #f7f7f7; font-size: 24px; font-family: 'Trebuchet MS', Arial, Helvetica; }
+.pfont { clear: both; margin-left: 8px; margin-top: 5px; display: inline-block; text-align: left; color: #f7f7f7; font-family: Arial, 'Times New Roman',Times, serif; }
+    .pfont a { clear: both; margin-top: 5px; display: inline-block; text-align: left; color: #f7f7f7; font-family: Arial, 'Times New Roman',Times, serif; }
+.pfont>li{
+	color: white;
+}
+.box { padding-left: 20px; padding-right: 20px; border: 1px solid; border-color: lightgray; box-shadow: initial; min-height: 353px; }
+.box1,.box2,.box3,.box4 { float: left; display: inline;  text-align: left; position: relative; }
+
+	h1{
+		font-size: 5em !important;
+		font-family: arial,helvetica;
+		color: #F15234;
+		margin:0;
+	}
+	
+	.intro p{
+		/*color: #383a3d;*/
+		font-size: 1em;
+	}
+/*carousel*/
+	.container {
+  margin: 0 auto;
+  width: 250px;
+  height: 200px;
+  position: relative;
+  perspective: 1000px;
+  z-index: 10000;
+}
+
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.item {
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 250px;
+  height: 200px;
+  line-height: 200px;
+  font-size: 5em;
+  text-align: center;
+  color: #FFF;
+  opacity: 0.95;
+  border-radius: 10px;
+}
+
+.a {
+  transform: rotateY(0deg) translateZ(250px);
+  /*background: #ed1c24;*/
+  background:white;
+  color: #F15234;
+
+}
+.b {
+  transform: rotateY(60deg) translateZ(250px);
+  /*background: #0072bc;*/
+  background:white;
+  color: #F15234;
+}
+.c {
+  transform: rotateY(120deg) translateZ(250px);
+  /*background: #39b54a;*/
+  background:white;
+  color: #F15234;
+}
+.d {
+  transform: rotateY(180deg) translateZ(250px);
+  /*background: #f26522;*/
+  background:white;
+  color: #F15234;
+}
+.e {
+  transform: rotateY(240deg) translateZ(250px);
+  /*background: #630460;*/
+  background:white;
+  color: #F15234;
+} 
+.f {
+  transform: rotateY(300deg) translateZ(250px);
+  /*background: #8c6239;*/
+  background:white;
+  color: #F15234;
+}
+
+.next, .prev {
+ 			 margin-top: 100px;
+        	 background-color: #F15234;
+		    border :0;
+		    border-radius: 20px;
+
+		    color: white;
+		    padding: 15px 22px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		    /*margin: 4px 2px;*/
+		    cursor: pointer;
+}
+.prev{
+	margin-left: -22vw;
+}
+.next:hover, .prev:hover { color: #000; }
+.next:active, .prev:active {
+  top: 104px;
+  box-shadow: 0 1px 0 #999;
+}
+.next { right: 5em; }
+.prev { left: 5em; }
+
+
+
+
+
+
+
+
+
+
+
+	.section{
+		text-align:center;
+	}
+
+
+	.controlArrow.prev {
+		left: 50px;
+	}
+	.controlArrow.next{
+		right: 50px;
+	}
+	
+
+	
+	#infoMenu li a {
+		/*color: #fff;*/
+	}
+
+	#fp-nav ul li a span, 
+	.fp-slidesNav ul li a span {
+	    /*background: grey;*/	
+	    width: 8px;
+	    height: 8px;
+	    
+	    margin: -4px 0 0 -4px;
+	}
+	      
+	#fp-nav ul li a.active span, 
+	.fp-slidesNav ul li a.active span, 
+	#fp-nav ul li:hover a.active span, 
+	.fp-slidesNav ul li:hover a.active span {
+	    width: 8px;
+	    height: 8px;
+	    margin: -4px 0 0 -4px;
+
+	    background: #F15234;
+	 
+	}
+	.icons{
+
+		margin-left: 68%;
+		margin-top: 7vh;
+		position: absolute;
+		z-index: 1000;
+		color:white;
+
+	}
+	
+	.logo-brand{
+		
+		margin-top: 1vh;
+		position: absolute;
+		z-index: 1000;
+		
+	}
+	.logo-brand>img{
+		width: 16vw;
+		height: 13vh;
+		margin-left: 1vw;
+	}
+	#navcontainer ul
+	{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+	}
+
+	#navcontainer ul li { display: inline; }
+
+	#navcontainer ul li a
+	{
+	text-decoration: none;
+	padding: .2em 1em;
+	/*color: #383a3d;*/
+	color: silver;
+	
+	}
+
+	#navcontainer ul li a:hover
+	{
+	color: #F15234;
+	
+	}
+	li{
+		
+		color: #F15234;
+
+	}
+	.scroll{
+		position: absolute;
+		z-index: 1000;
+		bottom: 0;
+		margin-left: 48%;
+	}
+	.scroll>a>img{
+		
+		height: 7vh;
+		max-width: 100%;
+
+	}
+	.nav{
+		/*background-color: white;*/
+		z-index: 1000;
+		width: 100%;
+		height: 15vh;
+		position: fixed;
+		
+
+
+	}
+	
+	.brand{
+		margin-top: 6vh;
+		float: left !important;
+		margin-left: 12vw;
+	}
+	.brand-img{
+		float: right !important;
+		margin-right: 7vw;
+	}
+
+	/*typed*/
+	 .typed-cursor{
+            opacity: 1;
+            font-weight: 100;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            -ms-animation: blink 0.7s infinite;
+            -o-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        @-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-ms-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-o-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+
+        .typed-fade-out{
+            opacity: 0;
+            animation: 0;
+            transition: opacity .25s;
+        }
+
+        .know{
+        	margin-top: 5px;
+        	 background-color: #F15234;
+		    border :0;
+		    border-radius: 20px;
+
+		    color: white;
+		    padding: 15px 32px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		    /*margin: 4px 2px;*/
+		    cursor: pointer;
+        }
+
+	.section{
+	    background-size: cover;
+	}        
+    #section0{
+	    background-image: url(colgkidblur.jpg) !important;
+	     /*background-position: center; */
+	    /*padding: 30% 0 0 0;*/
+	}
+	#section3{
+	    /*background-image: url(img/achieveblur.jpg) !important;*/
+	     background-position: center; 
+	    /*padding: 30% 0 0 0;*/
+	}
+	.contents{
+		background-image: url(colgkidblur-frost.jpg) !important;
+	}
+	.strong_color{
+			color: white;
+	}
+
+	@media only screen and (max-device-width: 780px) { 
+		.icons{
+			display: none;
+		}
+		.know{
+		    font-size: 4vw;
+
+		}
+		#section0{
+	    background-image: url(colgkidblur.jpg) !important;
+	     background-position: center; 
+	    /*padding: 30% 0 0 0;*/
+		}
+		#section3{
+	    background-image: url(img/achieve.jpg) !important;
+	     background-position: center; 
+	    /*padding: 30% 0 0 0;*/
+		}
+		.logo-brand>img{
+			width: 28vw;
+			height: 7vh;
+			margin-left: 2vw;
+		}
+		.strong_color{
+			color: white;
+		}
+		.span_color{
+			color: white !important;
+			font-size: 3vw !important;
+			display: none;
+		}
+		.brand{
+			margin-left: 22%;
+		}
+		h1{
+			font-size: 11vw;
+		}
+		.flash{
+			font-size: 3vw;	
+		}
+		#typed-strings{
+			font-size: 3vw;
+			/*display: none !important;*/
+		}
+	}
+
+	.sidenav , .bars{
+		display: none;
+	}
+	
+
+	@media screen and (max-device-width: 780px) {
+	  .sidenav {padding-top: 20px;}
+	  .sidenav a {font-size: 18px;}
+	  .bars,.sidenav{
+	  	margin-left: 90%; 
+	  	display: block;
+	  }
+	  .bars{
+	  	margin-top: 1vh;
+	  	z-index: 1000;
+	  	color: white !important;
+	  	text-decoration: none;
+	  }
+	  .sidenav {
+	    height: 100%;
+	    width: 0;
+	    position: fixed;
+	    z-index: 10000;
+	    top: 0;
+	    right: 0;
+	    /*background-color: #111;*/
+	    background-color: white;
+
+	    overflow-x: hidden;
+	    transition: 0.5s;
+	    padding-top: 60px;
+
+	}
+
+
+	.sidenav a {
+	    padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 25px;
+	    color: #818181;
+	    /*color: white;*/
+	    /*color: #F15234;*/
+	    display: block;
+	    transition: 0.3s;
+
+	}
+	.sidenav > .navs{
+		margin-top: 4vh;
+	    /*background-color: #101;*/
+	}
+	.sidenav a:hover, .offcanvas a:focus{
+	    color: #F15234;
+	    background-color: f2f2f2;
+	}
+
+	.sidenav .closebtn {
+	    position: absolute;
+	    top: 0;
+	    right: 25px;
+	    font-size: 36px;
+	    margin-left: 50px;
+	}
+	.copyright{
+		display: none;
+		margin-top: : 100% !important;
+	}
+	}
+
+
+
+	</style>
+	<style type="text/css">
+	i{
+		font-size: 4vw;
 		color: white;
+
+
+	}
+	.content{
+		margin-top:10vw;
+	}
+	.nav{
+		/*margin-top: -10vh;*/
+		width: 110%;
+		background: #1b1f26;
+	}
+	
+	.logo-brand{
+		margin-left: 1vw;
+	}
+	body{
+		color: silver;
 	}
 </style>
 </head>
 <body>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <img alt="Brand" src="img/logo.min.png" width="90px">
-      </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <!--   <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul> -->
-      <!-- <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form> -->
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Services</a></li>
-        <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li> -->
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+<div class="row">
+<div id="mySidenav" class="sidenav">
+  <a  class="closebtn" onclick="closeNav()">&times;</a>
+  <a class="navs" href="index.html">Home</a><hr>
+  <a class="navs" href="courses.html">Courses</a><hr>
+  <a class="navs" href="#third">Third</a><hr>
+  <a class="navs" href="#Contact">Contact</a><hr>
+  <!-- <a class="copyright" href="#">ReLearn Pro 2017</a> -->
+</div>
+<div class="nav">
+	<div class="logo-brand">
+		<img src="img/logo.min.light.png" >
+	</div>
+<span style="font-size:40px;cursor:pointer;color: white;" class="bars" onclick="openNav()">&#9776;</span>
+	
+	<div class="icons">
+		<div id="navcontainer">
+			<ul>
+			<li><a href="index.html">Home </a>|</li>
+  <li><a class="navs" href="courses.html">Courses</a> |</li>
+			
+			<li><a href="#third">Third</a>|</li>
+			<!-- <li><a href="#">Vegetables</a></li> -->
+			<li><a href="#Contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+<div class="content">
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-6">
-<center><button class="btn btn-success"><i class="devicon-android-plain"></i>IT Related Courses</button></center>
+<center><button class="btn btn-success " id="itbtn" onclick="it();"><i class="devicon-android-plain"></i>IT Related Courses</button></center>
 </div>
 
 <div class="col-md-6">
-<center><button class="btn btn-default"><i class="devicon-redis-plain"></i>Examination Related Courses</button></center>
+<center><button class="btn btn-default " id="exambtn" onclick="exam();"><i class="devicon-redis-plain"></i>Examination Related Courses</button></center>
 </div>
 
 </div>
 <br>
+<div id="it">
 		<div class="row">
 			<div class="col-md-3">
-                        <section class="panel">
-                            <div class="twt-feed blue-bg">
-                                
-                                <div class="fa fa-twitter wtt-mark"></div>
-                                <a href="#">
-                                    <i class="devicon-java-plain"></i>
-
-                                </a>
-                                <h1>Java</h1>
-                                <p></p>
-
-                            </div>
-                            <div class="weather-category twt-category">
-                                <ul>
-                                    <li class="active">
-                                        <h5>750</h5>
-                                        Tweets
-                                    </li>
-                                    <li>
-                                        <h5>865</h5>
-                                        Following
-                                    </li>
-                                    <li>
-                                        <h5>3645</h5>
-                                        Followers
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- <div class="twt-write col-sm-12">
-                                <textarea placeholder="Write your Tweet and Enter" rows="1" class="form-control t-text-area"></textarea>
-                            </div> -->
-                            <footer class="twt-footer">
-                                <a href="#"><i class="fa fa-camera"></i></a>
-                                <a href="#"><i class="fa fa-map-marker"></i></a>
-                                New Castle, UK
-                        <span class="pull-right">
-                            32
-                        </span>
-                            </footer>
-                        </section>
+                        <div class="box box1">
+                <div style="width:83px; height:81px; margin-top: 10px;">
+                    <i class="devicon-python-plain"></i>
+                </div>
+                <h2 class="h2font">Python</h2>
+                <p aria-multiline="true" class="pfont">
+                    Just Register, Authenticate and setup your prelimineries
+                </p>
+                <ol class="pfont">
+                    <li>
+                        Register and Authenticate
+                    </li>
+                    <li>
+                        Create users and roles as necessary for the system usage
+                    </li>
+                    <li>
+                        Create master data like language and classes and subject, so to easily access
+                    </li>
+                </ol>
+                <div class="pull-right bottom_link">
+                     <img id="img_36" src="img/box1.png" width="48" height="49" border="0" onmouseover="$(this).attr('src','img/box1-hovered.png');" onmouseout="this.src='img/box1.png';">
+                </div>
+            </div>
                     </div>
 
 			<div class="col-md-3">
-                        <section class="panel">
-                            <div class="twt-feed blue-bg">
-                                
-                                <div class="fa fa-twitter wtt-mark"></div>
-                                <a href="#">
-                                    <i class="devicon-java-plain"></i>
-
-                                </a>
-                                <h1>Java</h1>
-                                <p></p>
-
-                            </div>
-                            <div class="weather-category twt-category">
-                                <ul>
-                                    <li class="active">
-                                        <h5>750</h5>
-                                        Tweets
-                                    </li>
-                                    <li>
-                                        <h5>865</h5>
-                                        Following
-                                    </li>
-                                    <li>
-                                        <h5>3645</h5>
-                                        Followers
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- <div class="twt-write col-sm-12">
-                                <textarea placeholder="Write your Tweet and Enter" rows="1" class="form-control t-text-area"></textarea>
-                            </div> -->
-                            <footer class="twt-footer">
-                                <a href="#"><i class="fa fa-camera"></i></a>
-                                <a href="#"><i class="fa fa-map-marker"></i></a>
-                                New Castle, UK
-                        <span class="pull-right">
-                            32
-                        </span>
-                            </footer>
-                        </section>
+                        <div class="box box2">
+                <div style="width:83px; height:81px; margin-top: 10px;">
+                    <i class="devicon-java-plain"></i>
+                </div>
+                <h2 class="h2font">Java</h2>
+                <p aria-multiline="true" class="pfont">
+                    Just Register, Authenticate and setup your prelimineries
+                </p>
+                <ol class="pfont">
+                    <li>
+                        Register and Authenticate
+                    </li>
+                    <li>
+                        Create users and roles as necessary for the system usage
+                    </li>
+                    <li>
+                        Create master data like language and classes and subject, so to easily access
+                    </li>
+                </ol>
+                <div class="pull-right bottom_link">
+                     <img id="img_36" src="img/box2.png" width="48" height="49" border="0" onmouseover="$(this).attr('src','img/box2-hovered.png');" onmouseout="this.src='img/box2.png';">
+                </div>
+            </div>
                     </div>
                     <div class="col-md-3">
-                        <section class="panel">
-                            <div class="twt-feed blue-bg">
-                                <div class="corner-ribon black-ribon">
-                                    <!-- <i class="devicon-java-plain"></i> -->
-                                </div>
-                                <div class="fa fa-twitter wtt-mark"></div>
-                                <a href="#">
-                                    <i class="devicon-java-plain"></i>
-
-                                </a>
-                                <h1>Java</h1>
-                                <p></p>
-
-                            </div>
-                            <div class="weather-category twt-category">
-                                <ul>
-                                    <li class="active">
-                                        <h5>750</h5>
-                                        Tweets
-                                    </li>
-                                    <li>
-                                        <h5>865</h5>
-                                        Following
-                                    </li>
-                                    <li>
-                                        <h5>3645</h5>
-                                        Followers
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- <div class="twt-write col-sm-12">
-                                <textarea placeholder="Write your Tweet and Enter" rows="1" class="form-control t-text-area"></textarea>
-                            </div> -->
-                            <footer class="twt-footer">
-                                <a href="#"><i class="fa fa-camera"></i></a>
-                                <a href="#"><i class="fa fa-map-marker"></i></a>
-                                New Castle, UK
-                        <span class="pull-right">
-                            32
-                        </span>
-                            </footer>
-                        </section>
+                        <div class="box box3">
+                <div style="width:83px; height:81px; margin-top: 10px;">
+                    <i class="devicon-c-plain"></i>
+                </div>
+                <h2 class="h2font">C</h2>
+                <p aria-multiline="true" class="pfont">
+                    Just Register, Authenticate and setup your prelimineries
+                </p>
+                <ol class="pfont">
+                    <li>
+                        Register and Authenticate
+                    </li>
+                    <li>
+                        Create users and roles as necessary for the system usage
+                    </li>
+                    <li>
+                        Create master data like language and classes and subject, so to easily access
+                    </li>
+                </ol>
+                <div class="pull-right bottom_link">
+                     <img id="img_36" src="img/box3.png" width="48" height="49" border="0" onmouseover="$(this).attr('src','img/box3-hovered.png');" onmouseout="this.src='img/box3.png';">
+                </div>
+            </div>
                     </div>
 
 <div class="col-md-3">
-                        <section class="panel">
-                            <div class="twt-feed blue-bg">
-                                <div class="corner-ribon black-ribon">
-                                    <!-- <i class="devicon-java-plain"></i> -->
-                                </div>
-                                <div class="fa fa-twitter wtt-mark"></div>
-                                <a href="#">
-                                    <i class="devicon-java-plain"></i>
+                        <div class="box box4">
+                <div style="width:83px; height:81px; margin-top: 10px;">
+                    <i class="devicon-cplusplus-plain"></i>
+                </div>
+                <h2 class="h2font">cplusplus</h2>
+                <p aria-multiline="true" class="pfont">
+                    Just Register, Authenticate and setup your prelimineries
+                </p>
+                <ol class="pfont">
+                    <li>
+                        Register and Authenticate
+                    </li>
+                    <li>
+                        Create users and roles as necessary for the system usage
+                    </li>
+                    <li>
+                        Create master data like language and classes and subject, so to easily access
+                    </li>
+                </ol>
+                <div class="pull-right bottom_link">
+                     <img id="img_36" src="img/box4.png" width="48" height="49" border="0" onmouseover="$(this).attr('src','img/box4-hovered.png');" onmouseout="this.src='img/box4.png';">
+                </div>
+            </div>
+                    </div>
 
-                                </a>
-                                <h1>Java</h1>
-                                <p></p>
+</div>                    	
+<br>
+<div class="row">
+			<div class="col-md-3">
+                        <div class="box box1">
+                <div style="width:83px; height:81px; margin-top: 10px;">
+                    <i class="devicon-python-plain"></i>
+                </div>
+                <h2 class="h2font">Python</h2>
+                <p aria-multiline="true" class="pfont">
+                    Just Register, Authenticate and setup your prelimineries
+                </p>
+                <ol class="pfont">
+                    <li>
+                        Register and Authenticate
+                    </li>
+                    <li>
+                        Create users and roles as necessary for the system usage
+                    </li>
+                    <li>
+                        Create master data like language and classes and subject, so to easily access
+                    </li>
+                </ol>
+                <div class="pull-right bottom_link">
+                     <img id="img_36" src="img/box1.png" width="48" height="49" border="0" onmouseover="$(this).attr('src','img/box1-hovered.png');" onmouseout="this.src='img/box1.png';">
+                </div>
+            </div>
+                    </div>
 
-                            </div>
-                            <div class="weather-category twt-category">
-                                <ul>
-                                    <li class="active">
-                                        <h5>750</h5>
-                                        Tweets
-                                    </li>
-                                    <li>
-                                        <h5>865</h5>
-                                        Following
-                                    </li>
-                                    <li>
-                                        <h5>3645</h5>
-                                        Followers
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- <div class="twt-write col-sm-12">
-                                <textarea placeholder="Write your Tweet and Enter" rows="1" class="form-control t-text-area"></textarea>
-                            </div> -->
-                            <footer class="twt-footer">
-                                <a href="#"><i class="fa fa-camera"></i></a>
-                                <a href="#"><i class="fa fa-map-marker"></i></a>
-                                New Castle, UK
-                        <span class="pull-right">
-                            32
-                        </span>
-                            </footer>
-                        </section>
+			<div class="col-md-3">
+                        <div class="box box2">
+                <div style="width:83px; height:81px; margin-top: 10px;">
+                    <i class="devicon-java-plain"></i>
+                </div>
+                <h2 class="h2font">Java</h2>
+                <p aria-multiline="true" class="pfont">
+                    Just Register, Authenticate and setup your prelimineries
+                </p>
+                <ol class="pfont">
+                    <li>
+                        Register and Authenticate
+                    </li>
+                    <li>
+                        Create users and roles as necessary for the system usage
+                    </li>
+                    <li>
+                        Create master data like language and classes and subject, so to easily access
+                    </li>
+                </ol>
+                <div class="pull-right bottom_link">
+                     <img id="img_36" src="img/box2.png" width="48" height="49" border="0" onmouseover="$(this).attr('src','img/box2-hovered.png');" onmouseout="this.src='img/box2.png';">
+                </div>
+            </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box box3">
+                <div style="width:83px; height:81px; margin-top: 10px;">
+                    <i class="devicon-c-plain"></i>
+                </div>
+                <h2 class="h2font">C</h2>
+                <p aria-multiline="true" class="pfont">
+                    Just Register, Authenticate and setup your prelimineries
+                </p>
+                <ol class="pfont">
+                    <li>
+                        Register and Authenticate
+                    </li>
+                    <li>
+                        Create users and roles as necessary for the system usage
+                    </li>
+                    <li>
+                        Create master data like language and classes and subject, so to easily access
+                    </li>
+                </ol>
+                <div class="pull-right bottom_link">
+                     <img id="img_36" src="img/box3.png" width="48" height="49" border="0" onmouseover="$(this).attr('src','img/box3-hovered.png');" onmouseout="this.src='img/box3.png';">
+                </div>
+            </div>
+                    </div>
+
+<div class="col-md-3">
+                        <div class="box box4">
+                <div style="width:83px; height:81px; margin-top: 10px;">
+                    <i class="devicon-cplusplus-plain"></i>
+                </div>
+                <h2 class="h2font">cplusplus</h2>
+                <p aria-multiline="true" class="pfont">
+                    Just Register, Authenticate and setup your prelimineries
+                </p>
+                <ol class="pfont">
+                    <li>
+                        Register and Authenticate
+                    </li>
+                    <li>
+                        Create users and roles as necessary for the system usage
+                    </li>
+                    <li>
+                        Create master data like language and classes and subject, so to easily access
+                    </li>
+                </ol>
+                <div class="pull-right bottom_link">
+                     <img id="img_36" src="img/box4.png" width="48" height="49" border="0" onmouseover="$(this).attr('src','img/box4-hovered.png');" onmouseout="this.src='img/box4.png';">
+                </div>
+            </div>
                     </div>
 
 </div>                    	
 
-	<div class="row">
-			<div class="col-md-3">
-                        <section class="panel">
-                            <div class="twt-feed blue-bg">
-                                <div class="corner-ribon black-ribon">
-                                    <!-- <i class="devicon-java-plain"></i> -->
-                                </div>
-                                <div class="fa fa-twitter wtt-mark"></div>
-                                <a href="#">
-                                    <i class="devicon-java-plain"></i>
-
-                                </a>
-                                <h1>Java</h1>
-                                <p></p>
-
-                            </div>
-                            <div class="weather-category twt-category">
-                                <ul>
-                                    <li class="active">
-                                        <h5>750</h5>
-                                        Tweets
-                                    </li>
-                                    <li>
-                                        <h5>865</h5>
-                                        Following
-                                    </li>
-                                    <li>
-                                        <h5>3645</h5>
-                                        Followers
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- <div class="twt-write col-sm-12">
-                                <textarea placeholder="Write your Tweet and Enter" rows="1" class="form-control t-text-area"></textarea>
-                            </div> -->
-                            <footer class="twt-footer">
-                                <a href="#"><i class="fa fa-camera"></i></a>
-                                <a href="#"><i class="fa fa-map-marker"></i></a>
-                                New Castle, UK
-                        <span class="pull-right">
-                            32
-                        </span>
-                            </footer>
-                        </section>
-                    </div>
-
-			<div class="col-md-3">
-                        <section class="panel">
-                            <div class="twt-feed blue-bg">
-                                <div class="corner-ribon black-ribon">
-                                    <!-- <i class="devicon-java-plain"></i> -->
-                                </div>
-                                <div class="fa fa-twitter wtt-mark"></div>
-                                <a href="#">
-                                    <i class="devicon-java-plain"></i>
-
-                                </a>
-                                <h1>Java</h1>
-                                <p></p>
-
-                            </div>
-                            <div class="weather-category twt-category">
-                                <ul>
-                                    <li class="active">
-                                        <h5>750</h5>
-                                        Tweets
-                                    </li>
-                                    <li>
-                                        <h5>865</h5>
-                                        Following
-                                    </li>
-                                    <li>
-                                        <h5>3645</h5>
-                                        Followers
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- <div class="twt-write col-sm-12">
-                                <textarea placeholder="Write your Tweet and Enter" rows="1" class="form-control t-text-area"></textarea>
-                            </div> -->
-                            <footer class="twt-footer">
-                                <a href="#"><i class="fa fa-camera"></i></a>
-                                <a href="#"><i class="fa fa-map-marker"></i></a>
-                                New Castle, UK
-                        <span class="pull-right">
-                            32
-                        </span>
-                            </footer>
-                        </section>
-                    </div>
-                    <div class="col-md-3">
-                        <section class="panel">
-                            <div class="twt-feed blue-bg">
-                                <div class="corner-ribon black-ribon">
-                                    <!-- <i class="devicon-java-plain"></i> -->
-                                </div>
-                                <div class="fa fa-twitter wtt-mark"></div>
-                                <a href="#">
-                                    <i class="devicon-java-plain"></i>
-
-                                </a>
-                                <h1>Java</h1>
-                                <p></p>
-
-                            </div>
-                            <div class="weather-category twt-category">
-                                <ul>
-                                    <li class="active">
-                                        <h5>750</h5>
-                                        Tweets
-                                    </li>
-                                    <li>
-                                        <h5>865</h5>
-                                        Following
-                                    </li>
-                                    <li>
-                                        <h5>3645</h5>
-                                        Followers
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- <div class="twt-write col-sm-12">
-                                <textarea placeholder="Write your Tweet and Enter" rows="1" class="form-control t-text-area"></textarea>
-                            </div> -->
-                            <footer class="twt-footer">
-                                <a href="#"><i class="fa fa-camera"></i></a>
-                                <a href="#"><i class="fa fa-map-marker"></i></a>
-                                New Castle, UK
-                        <span class="pull-right">
-                            32
-                        </span>
-                            </footer>
-                        </section>
-                    </div>
-
-<div class="col-md-3">
-                        <section class="panel">
-                            <div class="twt-feed blue-bg">
-                                <div class="corner-ribon black-ribon">
-                                    <!-- <i class="devicon-java-plain"></i> -->
-                                </div>
-                                <div class="fa fa-twitter wtt-mark"></div>
-                                <a href="#">
-                                    <i class="devicon-java-plain"></i>
-
-                                </a>
-                                <h1>Java</h1>
-                                <p></p>
-
-                            </div>
-                            <div class="weather-category twt-category">
-                                <ul>
-                                    <li class="active">
-                                        <h5>750</h5>
-                                        Tweets
-                                    </li>
-                                    <li>
-                                        <h5>865</h5>
-                                        Following
-                                    </li>
-                                    <li>
-                                        <h5>3645</h5>
-                                        Followers
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- <div class="twt-write col-sm-12">
-                                <textarea placeholder="Write your Tweet and Enter" rows="1" class="form-control t-text-area"></textarea>
-                            </div> -->
-                            <footer class="twt-footer">
-                                <a href="#"><i class="fa fa-camera"></i></a>
-                                <a href="#"><i class="fa fa-map-marker"></i></a>
-                                New Castle, UK
-                        <span class="pull-right">
-                            32
-                        </span>
-                            </footer>
-                        </section>
-                    </div>
-
-</div>                    	
-
-
-	<div class="row">
-			<div class="col-md-3">
-                        <section class="panel">
-                            <div class="twt-feed blue-bg">
-                                <div class="corner-ribon black-ribon">
-                                    <!-- <i class="devicon-java-plain"></i> -->
-                                </div>
-                                <div class="fa fa-twitter wtt-mark"></div>
-                                <a href="#">
-                                    <i class="devicon-java-plain"></i>
-
-                                </a>
-                                <h1>Java</h1>
-                                <p></p>
-
-                            </div>
-                            <div class="weather-category twt-category">
-                                <ul>
-                                    <li class="active">
-                                        <h5>750</h5>
-                                        Tweets
-                                    </li>
-                                    <li>
-                                        <h5>865</h5>
-                                        Following
-                                    </li>
-                                    <li>
-                                        <h5>3645</h5>
-                                        Followers
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- <div class="twt-write col-sm-12">
-                                <textarea placeholder="Write your Tweet and Enter" rows="1" class="form-control t-text-area"></textarea>
-                            </div> -->
-                            <footer class="twt-footer">
-                                <a href="#"><i class="fa fa-camera"></i></a>
-                                <a href="#"><i class="fa fa-map-marker"></i></a>
-                                New Castle, UK
-                        <span class="pull-right">
-                            32
-                        </span>
-                            </footer>
-                        </section>
-                    </div>
-
-			<div class="col-md-3">
-                        <section class="panel">
-                            <div class="twt-feed blue-bg">
-                                <div class="corner-ribon black-ribon">
-                                    <!-- <i class="devicon-java-plain"></i> -->
-                                </div>
-                                <div class="fa fa-twitter wtt-mark"></div>
-                                <a href="#">
-                                    <i class="devicon-java-plain"></i>
-
-                                </a>
-                                <h1>Java</h1>
-                                <p></p>
-
-                            </div>
-                            <div class="weather-category twt-category">
-                                <ul>
-                                    <li class="active">
-                                        <h5>750</h5>
-                                        Tweets
-                                    </li>
-                                    <li>
-                                        <h5>865</h5>
-                                        Following
-                                    </li>
-                                    <li>
-                                        <h5>3645</h5>
-                                        Followers
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- <div class="twt-write col-sm-12">
-                                <textarea placeholder="Write your Tweet and Enter" rows="1" class="form-control t-text-area"></textarea>
-                            </div> -->
-                            <footer class="twt-footer">
-                                <a href="#"><i class="fa fa-camera"></i></a>
-                                <a href="#"><i class="fa fa-map-marker"></i></a>
-                                New Castle, UK
-                        <span class="pull-right">
-                            32
-                        </span>
-                            </footer>
-                        </section>
-                    </div>
-                    <div class="col-md-3">
-                        <section class="panel">
-                            <div class="twt-feed blue-bg">
-                                <div class="corner-ribon black-ribon">
-                                    <!-- <i class="devicon-java-plain"></i> -->
-                                </div>
-                                <div class="fa fa-twitter wtt-mark"></div>
-                                <a href="#">
-                                    <i class="devicon-java-plain"></i>
-
-                                </a>
-                                <h1>Java</h1>
-                                <p></p>
-
-                            </div>
-                            <div class="weather-category twt-category">
-                                <ul>
-                                    <li class="active">
-                                        <h5>750</h5>
-                                        Tweets
-                                    </li>
-                                    <li>
-                                        <h5>865</h5>
-                                        Following
-                                    </li>
-                                    <li>
-                                        <h5>3645</h5>
-                                        Followers
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- <div class="twt-write col-sm-12">
-                                <textarea placeholder="Write your Tweet and Enter" rows="1" class="form-control t-text-area"></textarea>
-                            </div> -->
-                            <footer class="twt-footer">
-                                <a href="#"><i class="fa fa-camera"></i></a>
-                                <a href="#"><i class="fa fa-map-marker"></i></a>
-                                New Castle, UK
-                        <span class="pull-right">
-                            32
-                        </span>
-                            </footer>
-                        </section>
-                    </div>
-
-<div class="col-md-3">
-                        <section class="panel">
-                            <div class="twt-feed blue-bg">
-                                <div class="corner-ribon black-ribon">
-                                    <!-- <i class="devicon-java-plain"></i> -->
-                                </div>
-                                <div class="fa fa-twitter wtt-mark"></div>
-                                <a href="#">
-                                    <i class="devicon-java-plain"></i>
-
-                                </a>
-                                <h1>Java</h1>
-                                <p></p>
-
-                            </div>
-                            <div class="weather-category twt-category">
-                                <ul>
-                                    <li class="active">
-                                        <h5>750</h5>
-                                        Tweets
-                                    </li>
-                                    <li>
-                                        <h5>865</h5>
-                                        Following
-                                    </li>
-                                    <li>
-                                        <h5>3645</h5>
-                                        Followers
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- <div class="twt-write col-sm-12">
-                                <textarea placeholder="Write your Tweet and Enter" rows="1" class="form-control t-text-area"></textarea>
-                            </div> -->
-                            <footer class="twt-footer">
-                                <a href="#"><i class="fa fa-camera"></i></a>
-                                <a href="#"><i class="fa fa-map-marker"></i></a>
-                                New Castle, UK
-                        <span class="pull-right">
-                            32
-                        </span>
-                            </footer>
-                        </section>
-                    </div>
-
-</div>                    	
-
+	
 </div>
+
+
+
+
+
+
+<!-- examrelated -->
+
+<div id="exam">
+		<div class="row">
+			<div class="col-md-3">
+                        <div class="box box1">
+                <div style="width:83px; height:81px; margin-top: 10px;">
+                    <i class="devicon-python-plain"></i>
+                </div>
+                <h2 class="h2font">CAT</h2>
+                <p aria-multiline="true" class="pfont">
+                    Just Register, Authenticate and setup your prelimineries
+                </p>
+                <ol class="pfont">
+                    <li>
+                        Register and Authenticate
+                    </li>
+                    <li>
+                        Create users and roles as necessary for the system usage
+                    </li>
+                    <li>
+                        Create master data like language and classes and subject, so to easily access
+                    </li>
+                </ol>
+                <div class="pull-right bottom_link">
+                     <img id="img_36" src="img/box1.png" width="48" height="49" border="0" onmouseover="$(this).attr('src','img/box1-hovered.png');" onmouseout="this.src='img/box1.png';">
+                </div>
+            </div>
+                    </div>
+
+			<div class="col-md-3">
+                        <div class="box box2">
+                <div style="width:83px; height:81px; margin-top: 10px;">
+                    <i class="devicon-java-plain"></i>
+                </div>
+                <h2 class="h2font">GMAT</h2>
+                <p aria-multiline="true" class="pfont">
+                    Just Register, Authenticate and setup your prelimineries
+                </p>
+                <ol class="pfont">
+                    <li>
+                        Register and Authenticate
+                    </li>
+                    <li>
+                        Create users and roles as necessary for the system usage
+                    </li>
+                    <li>
+                        Create master data like language and classes and subject, so to easily access
+                    </li>
+                </ol>
+                <div class="pull-right bottom_link">
+                     <img id="img_36" src="img/box2.png" width="48" height="49" border="0" onmouseover="$(this).attr('src','img/box2-hovered.png');" onmouseout="this.src='img/box2.png';">
+                </div>
+            </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box box3">
+                <div style="width:83px; height:81px; margin-top: 10px;">
+                    <i class="devicon-c-plain"></i>
+                </div>
+                <h2 class="h2font">GRE</h2>
+                <p aria-multiline="true" class="pfont">
+                    Just Register, Authenticate and setup your prelimineries
+                </p>
+                <ol class="pfont">
+                    <li>
+                        Register and Authenticate
+                    </li>
+                    <li>
+                        Create users and roles as necessary for the system usage
+                    </li>
+                    <li>
+                        Create master data like language and classes and subject, so to easily access
+                    </li>
+                </ol>
+                <div class="pull-right bottom_link">
+                     <img id="img_36" src="img/box3.png" width="48" height="49" border="0" onmouseover="$(this).attr('src','img/box3-hovered.png');" onmouseout="this.src='img/box3.png';">
+                </div>
+            </div>
+                    </div>
+
+<div class="col-md-3">
+                        <div class="box box4">
+                <div style="width:83px; height:81px; margin-top: 10px;">
+                    <i class="devicon-cplusplus-plain"></i>
+                </div>
+                <h2 class="h2font">IELTS</h2>
+                <p aria-multiline="true" class="pfont">
+                    Just Register, Authenticate and setup your prelimineries
+                </p>
+                <ol class="pfont">
+                    <li>
+                        Register and Authenticate
+                    </li>
+                    <li>
+                        Create users and roles as necessary for the system usage
+                    </li>
+                    <li>
+                        Create master data like language and classes and subject, so to easily access
+                    </li>
+                </ol>
+                <div class="pull-right bottom_link">
+                     <img id="img_36" src="img/box4.png" width="48" height="49" border="0" onmouseover="$(this).attr('src','img/box4-hovered.png');" onmouseout="this.src='img/box4.png';">
+                </div>
+            </div>
+                    </div>
+
+</div>                    	
+<br>
+
+
+	
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"

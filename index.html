@@ -42,11 +42,38 @@ function closeNav() {
 </script>
 
 <style>
+.content,.content2{
+	
+	float: left !important;
+	margin-left: 10vw;
+	margin-top: 15vw;
+}
+
+.content2{
+ 	margin-top: 1vw;
+ 	/*display: none;*/
+ }
+
+.content > font , .content2 >font{
+	float: left;
+}
+.idea > img{
+	margin-left: 140%;
+	width: 52%;
+	margin-top: -20vw;
+	/*height: 10vh;*/
+}
+.tagline{
+	float: left;
+	font-family: arial,helvetica;
+	
+}
 	h1{
-		font-size: 5em;
+		font-size: 3em;
 		font-family: arial,helvetica;
 		color: #F15234;
 		margin:0;
+		text-align: left;
 	}
 	body{
 		color: silver;
@@ -66,7 +93,7 @@ function closeNav() {
 }
 
 
-.carousel {
+.carousel,.carousel1 {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -78,78 +105,84 @@ function closeNav() {
   display: block;
   position: absolute;
   background: #000;
-  width: 250px;
-  height: 200px;
-  line-height: 200px;
-  font-size: 5em;
+  width: 210px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 4em;
   text-align: center;
   color: #FFF;
   opacity: 0.95;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
-.a {
+.a,.a1 {
   transform: rotateY(0deg) translateZ(250px);
   /*background: #ed1c24;*/
-  background:white;
-  color: #F15234;
+  opacity: 0.86;
+  background:silver;
+  color: black;
 }
-.b {
+.b,.b1 {
+
   transform: rotateY(60deg) translateZ(250px);
   /*background: #0072bc;*/
-  background:white;
-  color: #F15234;
+  opacity: 0.86;
+  background:silver;
+  color: black;
 }
-.c {
+.c,.c1 {
   transform: rotateY(120deg) translateZ(250px);
   /*background: #39b54a;*/
-  background:white;
-  color: #F15234;
+  opacity: 0.86;
+  background:silver;
+  color: black;
 }
-.d {
+.d,.d1 {
   transform: rotateY(180deg) translateZ(250px);
   /*background: #f26522;*/
-  background:white;
-  color: #F15234;
+  opacity: 0.86;
+  background:silver;
+  color: black;
 }
-.e {
+.e,.e1 {
   transform: rotateY(240deg) translateZ(250px);
   /*background: #630460;*/
-  background:white;
-  color: #F15234;
+  opacity: 0.86;
+  background:silver;
+  color: black;
 } 
-.f {
+.f,.f1 {
   transform: rotateY(300deg) translateZ(250px);
   /*background: #8c6239;*/
-  background:white;
-  color: #F15234;
+  opacity: 0.86;
+  background:silver;
+  color: black;
 }
 
-.next, .prev {
- 			 margin-top: 100px;
-        	 background-color: #F15234;
+.next, .prev ,.next1, .prev1 {
+        	 /*background-color: #F15234;*/
 		    border :0;
 		    border-radius: 20px;
 
-		    color: white;
+		    color: #F15234;
 		    padding: 15px 22px;
 		    text-align: center;
 		    text-decoration: none;
 		    display: inline-block;
 		    font-size: 16px;
-		    /*margin: 4px 2px;*/
 		    cursor: pointer;
+		    text-decoration: bolder;
 }
-.prev{
-	margin-left: -22vw;
+.prev,.prev1{
+	margin-left: -65vw;
 }
-.next:hover, .prev:hover { color: #000; }
-.next:active, .prev:active {
-  top: 104px;
+.next:hover, .prev:hover ,.next1:hover, .prev1:hover{ color: #000; }
+.next:active, .prev:active ,.next1:active, .prev1:active{
+  /*top: 104px;*/
   box-shadow: 0 1px 0 #999;
 }
-.next { right: 5em; }
-.prev { left: 5em; }
+.next ,.next1 { right: 0; }
+.prev,.prev1 { left: 0; }
 
 
 
@@ -272,12 +305,17 @@ function closeNav() {
 	}
 	
 	.brand{
-		margin-top: 6vh;
+		/*margin-top: -4vh;*/
 		float: left !important;
-		margin-left: 12vw;
+		margin-left: 10vw;
 	}
+	
+		.brand1{
+			margin-left: -100%;
+		}
+	
 	.brand-img{
-		float: right !important;
+		/*float: right !important;*/
 		margin-right: 7vw;
 	}
 
@@ -327,14 +365,14 @@ function closeNav() {
         	margin-top: 5px;
         	 background-color: #F15234;
 		    border :0;
-		    border-radius: 20px;
-
+		    /*border-radius: 20px;*/
+		    float: left;
 		    color: white;
-		    padding: 15px 32px;
+		    padding: 10px 20px;
 		    text-align: center;
 		    text-decoration: none;
 		    display: inline-block;
-		    font-size: 16px;
+		    font-size: 19px;
 		    /*margin: 4px 2px;*/
 		    cursor: pointer;
         }
@@ -342,8 +380,8 @@ function closeNav() {
 	.section{
 	    background-size: cover;
 	}        
-    #section0{
-	    background-image: url(colgkidblur.jpg) !important;
+    #section1{
+	    background-image: url(colgkid.jpg) !important;
 	     /*background-position: center; */
 	    /*padding: 30% 0 0 0;*/
 	}
@@ -352,9 +390,7 @@ function closeNav() {
 	     background-position: center; 
 	    /*padding: 30% 0 0 0;*/
 	}
-	.contents{
-		background-image: url(colgkidblur-frost.jpg) !important;
-	}
+	
 	.strong_color{
 			color: white;
 	}
@@ -367,16 +403,12 @@ function closeNav() {
 		    font-size: 4vw;
 
 		}
-		#section0{
+		#section1{
 	    background-image: url(colgkidblur.jpg) !important;
 	     background-position: center; 
 	    /*padding: 30% 0 0 0;*/
 		}
-		#section3{
-	    background-image: url(img/achieve.jpg) !important;
-	     background-position: center; 
-	    /*padding: 30% 0 0 0;*/
-		}
+		
 		.logo-brand>img{
 			width: 28vw;
 			height: 7vh;
@@ -512,11 +544,11 @@ function closeNav() {
 	<div class="section " id="section0">
 	<div class="contents">
 		<div class="intro brand">
-			<h1 class="wow pulse" data-wow-duration="1s" ><font color="white">ReLearn</font> Pro</h1>
+			<h1 class="wow pulse" data-wow-duration="1s" ><font color="white">ARTIFICIAL</font><BR>INTELLIGENCE</h1>
 			<!-- <img src="img/logo.min.light.png"> -->
 			<!-- <p >An Initiative by Topfreshers</p> -->
-			<font class="wow flash" data-wow-duration="1s" data-wow-delay="1s">CAT | GMAT | GRE | TOEFL | IELTS</font>
-			<div class="type-wrap">
+			<font class="wow pulse tagline " data-wow-duration="1s"   size="3px">AI is the new UI to Education </font>
+			<!-- <div class="type-wrap">
 			<span>Are you</span>
             <div id="typed-strings">
                 <span class="span_color" style="font-size: 2vw;">ready to break the<strong class = "strong_color"> GRE Code</strong> ?</span>
@@ -524,16 +556,14 @@ function closeNav() {
                 <span class="span_color" style="font-size: 2vw;">ready to Bell the<strong class = "strong_color"> CAT</strong> ?</span>
                 <span class="span_color" style="font-size: 2vw;">an <strong class = "strong_color">MBA</strong> Aspirant ?</span>
                 <span class="span_color" style="font-size: 2vw;">a <strong class = "strong_color"> Working Professional</strong> ?</span>
-                <!-- <p>It <em>types</em> out sentences.</p> -->
-                <!-- <p>And then deletes them.</p> -->
-                <!-- <p>Try it out!</p> -->
-            </div>
+                           </div>
             <span id="typed" style="white-space:pre;"></span>
-        </div>
+        </div> -->
+        <br><br>
                 <a href="courses.html"><input type="button" class="know wow rubberBand" data-wow-duration="1s" value="Know More!"></a>
-                <div class="  current-slide"  	>
+                <div class="  current-slide"   	>
                 
-                <canvas id="myCanvas" class="canvas-brain-plasma"></canvas>
+                <canvas   id="myCanvas" class="canvas-brain-plasma"></canvas>
                 </div>
 		</div>
 		</div>
@@ -541,36 +571,101 @@ function closeNav() {
 			<img class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1s" src="img/classroom.jpg">
 		</div> -->			
 	</div>
+
 	<div class="section" id="section1">
-	    <div class="slide" id="slide1">
-			
 			<div class="intro">
-			<!-- <h1>2</h1> -->
+	    	<div class="content2">
+			<h1  ><font color="white">ARTIFICIAL</font><BR>INTELLIGENCE</h1>
+			<font >CAT | GMAT | GRE | TOEFL | IELTS</font>
+			<br><br>
+                <a href="courses.html"><input type="button" class="know " value="Know More!"></a>
+			<!-- <img src="img/logo.min.light.png"> -->
+			<!-- <p >An Initiative by Topfreshers</p> -->
 			
+			<!-- <div class="type-wrap">
+			<span>Are you</span>
+            <div id="typed-strings">
+                <span class="span_color" style="font-size: 2vw;">ready to break the<strong class = "strong_color"> GRE Code</strong> ?</span>
+                <span class="span_color" style="font-size: 2vw;">ready to Ace<strong class = "strong_color"> GMAT</strong> ?</span>
+                <span class="span_color" style="font-size: 2vw;">ready to Bell the<strong class = "strong_color"> CAT</strong> ?</span>
+                <span class="span_color" style="font-size: 2vw;">an <strong class = "strong_color">MBA</strong> Aspirant ?</span>
+                <span class="span_color" style="font-size: 2vw;">a <strong class = "strong_color"> Working Professional</strong> ?</span>
+                           </div>
+            <span id="typed" style="white-space:pre;"></span>
+        </div> -->
+        
+                
 		</div>
 		</div>
 
 	</div>
+
 	<div class="section" id="section2">
 		<div class="intro">
-			<h1>3</h1>
+			<!-- <h1>3</h1> -->
+			<div class="content">
+			
+			<h1  ><font color="white">ARTIFICIAL</font><BR>INTELLIGENCE</h1>
+			<font >CAT | GMAT | GRE | TOEFL | IELTS</font>
+			<br><br>
+                <a href="courses.html"><input type="button" class="know " value="Know More!"></a>
+			<!-- <img src="img/logo.min.light.png"> -->
+			<!-- <p >An Initiative by Topfreshers</p> -->
+			
+			<!-- <div class="type-wrap">
+			<span>Are you</span>
+            <div id="typed-strings">
+                <span class="span_color" style="font-size: 2vw;">ready to break the<strong class = "strong_color"> GRE Code</strong> ?</span>
+                <span class="span_color" style="font-size: 2vw;">ready to Ace<strong class = "strong_color"> GMAT</strong> ?</span>
+                <span class="span_color" style="font-size: 2vw;">ready to Bell the<strong class = "strong_color"> CAT</strong> ?</span>
+                <span class="span_color" style="font-size: 2vw;">an <strong class = "strong_color">MBA</strong> Aspirant ?</span>
+                <span class="span_color" style="font-size: 2vw;">a <strong class = "strong_color"> Working Professional</strong> ?</span>
+                           </div>
+            <span id="typed" style="white-space:pre;"></span>
+        </div> -->
+        
+		
+		
+				<div class="idea">
+					<img src="img/idea.png">
+				</div>
 		</div>
 	</div>
+	</div>
+
 	<div class="section" id="section3">
+	<br><br><br>
 		<div class="intro">
-		<h1 style="color:white;">Achieve<font style="color:#F15234;">ments</font></h1><br><br>
+		<h3 style="color:white;">Achieve<font style="color:#F15234;">ments</font></h3><br><br>
 			<div class="container">
-  <div class="carousel">
-    <div class="item a">A</div>
-    <div class="item b">B</div>
-    <div class="item c">C</div>
-    <div class="item d">D</div>
-    <div class="item e">E</div>
-    <div class="item f">F</div>
-  </div>
-</div>
-<div class="next">></div>
-<div class="prev"><</div>
+			<div class="row">
+			  	<div class="carousel">
+				    <div class="item a">A</div>
+				    <div class="item b">B</div>
+				    <div class="item c">C</div>
+				    <div class="item d">D</div>
+				    <div class="item e">E</div>
+				    <div class="item f">F</div>
+			  	</div>
+			</div>
+		<div class="next">></div>
+		<div class="prev"><</div>
+		</div>
+		<h3 style="color:white;">Achieve<font style="color:#F15234;">ments</font></h3><br><br>
+			<div class="container">
+			<div class="row">
+			  <div class="carousel1">
+			    <div class="item a1">A</div>
+			    <div class="item b1">B</div>
+			    <div class="item c1">C</div>
+			    <div class="item d1">D</div>
+			    <div class="item e1">E</div>
+			    <div class="item f1">F</div>
+			  </div>
+			</div>
+			<div class="next1">></div>
+			<div class="prev1"><</div>
+			</div>
 		</div>
 	</div>
             
@@ -626,8 +721,13 @@ function closeNav() {
 	var carousel = $(".carousel"),
     currdeg  = 0;
 
+    var carousel1 = $(".carousel1"),
+    currdeg  = 0;
+
 $(".next").on("click", { d: "n" }, rotate);
 $(".prev").on("click", { d: "p" }, rotate);
+$(".next1").on("click", { d: "n1" }, rotate1);
+$(".prev1").on("click", { d: "p1" }, rotate1);
 
 function rotate(e){
   if(e.data.d=="n"){
@@ -636,6 +736,7 @@ function rotate(e){
   if(e.data.d=="p"){
     currdeg = currdeg + 60;
   }
+ 
   carousel.css({
     "-webkit-transform": "rotateY("+currdeg+"deg)",
     "-moz-transform": "rotateY("+currdeg+"deg)",
@@ -643,6 +744,22 @@ function rotate(e){
     "transform": "rotateY("+currdeg+"deg)"
   });
 }
+function rotate1(e){
+  if(e.data.d=="n1"){
+    currdeg = currdeg - 60;
+  }
+  if(e.data.d=="p1"){
+    currdeg = currdeg + 60;
+  }
+ 
+  carousel1.css({
+    "-webkit-transform": "rotateY("+currdeg+"deg)",
+    "-moz-transform": "rotateY("+currdeg+"deg)",
+    "-o-transform": "rotateY("+currdeg+"deg)",
+    "transform": "rotateY("+currdeg+"deg)"
+  });
+}
+
 </script>
 <!-- <script async="" src="25759"></script> -->
 <script type="text/javascript" src="js/home.min.js" charset="utf-8"></script>
